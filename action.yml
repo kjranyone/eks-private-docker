@@ -1,0 +1,37 @@
+name: 'EKS Private Docker'
+author: Kojiro Tanaka
+description: Run Kubectl command with aws and docker image.
+branding:
+  color: 'white'
+  icon: 'command'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+inputs:
+  aws_access_key_id:
+    description: access key for control eks
+    required: true
+  aws_secret_access_key:
+    description: secret key for control eks
+    required: true
+  aws_region:
+    description: eks cluster region
+    required: true
+  cluster_name:
+    description: eks cluster name
+    required: true
+  secret_name:
+    description: kubectl secret name
+    required: true
+  docker_server:
+    description: your docker registry name
+    required: true
+  docker_username:
+    description: your docker username
+    required: true
+  docker_password:
+    description: your docker password
+    required: true
+  docker_email:
+    description: your docker email
+    required: true
