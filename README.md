@@ -14,10 +14,10 @@ jobs:
         with:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws_region: ap-northeast-1
+          aws_region: your cluster region (ap-northeast-1)
           cluster_name: your cluster name
           secret_name: regcred
-          docker_server: ${{ DOCKER_ACCESS_TOKEN }}
+          docker_server: your docker registry server url
           docker_username: ${{ secrets.DOCKER_USER_ID }}
           docker_password: ${{ secrets.DCOKER_PASSWORD }}
           docker_email: your email
